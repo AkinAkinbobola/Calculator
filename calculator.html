@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+<h1 id="showDate" onload="getDate()" style="text-align: center"></h1>
+<hr>
+<div class="textbox">
+    <input  value="0" type="text" name="" id="output" class="text" readonly style="outline: none">
+</div>
+
+<table class="table">
+    <tr>
+        <td><input type="button" value="1" onclick="insertNum(1)" class="button"></td>
+        <td><input type="button" value="2" onclick="insertNum(2)" class="button"></td>
+        <td><input type="button" value="3" onclick="insertNum(3)" class="button"></td>
+        <td><input type="button" value="4" onclick="insertNum(4)" class="button"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="5" onclick="insertNum(5)" class="button"></td>
+        <td><input type="button" value="6" onclick="insertNum(6)" class="button"></td>
+        <td><input type="button" value="7" onclick="insertNum(7)" class="button"></td>
+        <td><input type="button" value="8" onclick="insertNum(8)" class="button"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="9" onclick="insertNum(9)" class="button"></td>
+        <td><input type="button" value="0" onclick="insertNum(0)" class="button"></td>
+        <td><input type="button" value="." onclick="insertPoint('.')" class="button"></td>
+        <td><input type="button" value="X" onclick="insertSymbol('*')" class="op_buttons"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="-" onclick="insertSymbol('-')" class="op_buttons"></td>
+        <td><input type="button" value="%" onclick="insertSymbol('%')" class="op_buttons"></td>
+        <td><input type="button" value="÷" onclick="insertSymbol('/')" class="op_buttons"></td>
+        <td><input type="button" value="C" onclick="refresh()" class="op_buttons"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="+" onclick="insertSymbol('+')" class="op_buttons"></td>
+        <td colspan="3"><input type="button" value="=" onclick="solve()" style="width: 100%;background-color: #24242f;"class="op_buttons"></td>
+    </tr>
+</table>
+<script src="calculator.js"></script>
+</body>
+</html>
